@@ -1,0 +1,62 @@
+---
+openapi: 3.0.1
+info:
+  title: API
+  version: v1
+paths:
+  "/api/signup":
+    post:
+      summary: ユーザー新規登録
+      tags:
+      - Auth
+      parameters: []
+      responses:
+        '200':
+          description: 成功
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                user:
+                  type: object
+                  properties:
+                    email:
+                      type: string
+                      example: new_user@example.com
+                    password:
+                      type: string
+                      example: password123
+                    password_confirmation:
+                      type: string
+                      example: password123
+              required:
+              - user
+  "/api/login":
+    post:
+      summary: ログイン実行
+      tags:
+      - Auth
+      parameters: []
+      responses:
+        '200':
+          description: 成功
+          headers:
+            access-token:
+              type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  example: test@example.com
+                password:
+                  type: string
+                  example: password123
+              required:
+              - email
+              - password

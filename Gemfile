@@ -74,3 +74,10 @@ gem 'rack-cors'
 gem 'activeadmin'
 gem 'sassc-rails' # ActiveAdminのスタイルに必要
 gem "mysql2"
+
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'rswag-specs'
+  gem 'rswag-api'
+  gem 'rswag-ui'
+end

@@ -8,16 +8,11 @@ RSpec.describe 'Registrations API', type: :request do
       parameter name: :body, in: :body, schema: {
         type: :object,
         properties: {
-          user: {
-            type: :object,
-            properties: {
-              email: { type: :string, example: 'new_user@example.com' },
-              password: { type: :string, example: 'password123' },
-              password_confirmation: { type: :string, example: 'password123' }
-            }
-          }
+          email: { type: :string, example: 'new_user@example.com' },
+          password: { type: :string, example: 'password123' },
+          password_confirmation: { type: :string, example: 'password123' }
         },
-        required: ['user']
+        required: ['email', 'password', 'password_confirmation']
       }
 
       response '200', '成功' do

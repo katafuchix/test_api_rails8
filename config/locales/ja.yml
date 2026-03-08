@@ -1,0 +1,25 @@
+ja:
+  errors:
+    messages:
+      authentication_failed: "メールアドレスまたはパスワードが違います"
+
+# ★ Railsのシステムが自動で使う分（これを足す）
+#  activerecord:
+#    errors:
+#      messages:
+#        record_invalid: "バリデーションに失敗しました: %{errors}"
+
+# ★ ここにパラメーター欠損用の文言を定義
+  action_controller:
+    errors:
+      parameter_missing: "必須パラメーターが不足しています: %{param}"
+
+  action_controller:
+    errors:
+      parameter_missing: "必須項目が不足しています: %{param}"
+  active_record:
+    errors:
+      record_invalid: "入力内容を確認してください: %{message}"
+  errors:
+    messages:
+      authentication_failed: "ログインに失敗しました。メールアドレスまたはパスワードが正しくありません。"

@@ -19,20 +19,19 @@ paths:
             schema:
               type: object
               properties:
-                user:
-                  type: object
-                  properties:
-                    email:
-                      type: string
-                      example: new_user@example.com
-                    password:
-                      type: string
-                      example: password123
-                    password_confirmation:
-                      type: string
-                      example: password123
+                email:
+                  type: string
+                  example: new_user@example.com
+                password:
+                  type: string
+                  example: password123
+                password_confirmation:
+                  type: string
+                  example: password123
               required:
-              - user
+              - email
+              - password
+              - password_confirmation
   "/api/login":
     post:
       summary: ログイン実行
@@ -53,7 +52,7 @@ paths:
               properties:
                 email:
                   type: string
-                  example: test@example.com
+                  example: test_user_0@example.com
                 password:
                   type: string
                   example: password123

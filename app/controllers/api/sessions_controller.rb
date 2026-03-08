@@ -1,5 +1,5 @@
 module Api
-  class SessionsController < ApplicationController # 継承元を戻す
+  class SessionsController < BaseController # 継承元を戻す
     skip_before_action :verify_authenticity_token
 
     def create
@@ -25,7 +25,9 @@ module Api
         #puts response
         render json: { status: 'success', data: user }
       else
-        render json: { status: 'error', message: '認証失敗' }, status: :unauthorized
+        #render json: { status: 'error', message: '認証失敗' }, status: :unauthorized
+        # 辞書から自動でメッセージを取得して投げる
+        raise Api::AuthenticationError
       end
     end
 

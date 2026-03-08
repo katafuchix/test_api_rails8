@@ -8,7 +8,7 @@ RSpec.describe 'Sessions API', type: :request do
       parameter name: :body, in: :body, schema: {
         type: :object,
         properties: {
-          email: { type: :string, example: 'test@example.com' },
+          email: { type: :string, example: 'test_user_0@example.com' },
           password: { type: :string, example: 'password123' }
         },
         required: ['email', 'password']

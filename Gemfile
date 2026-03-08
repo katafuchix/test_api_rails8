@@ -74,6 +74,7 @@ gem 'rack-cors'
 gem 'activeadmin'
 gem 'sassc-rails' # ActiveAdminのスタイルに必要
 gem "mysql2"
+gem 'rails-i18n' # これを入れるだけで、Rails標準のメッセージが全て日本語化される
 
 group :development, :test do
   gem 'rspec-rails'
